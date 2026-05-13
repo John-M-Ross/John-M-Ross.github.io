@@ -447,7 +447,83 @@
     }
     .skill-tag:hover { color: var(--text); border-color: var(--muted); }
 
-    /* Contact */
+    /* Certificates */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .cert-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .cert-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .cert-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cert-issuer {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .cert-badge {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      background: rgba(16,185,129,0.1);
+      color: var(--accent3);
+      border: 1px solid rgba(16,185,129,0.3);
+    }
+    .cert-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .cert-meta {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: auto;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+      transition: letter-spacing 0.2s;
+    }
+    .cert-link:hover { letter-spacing: 0.04em; }
+    @media (max-width: 900px) {
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Certificates */
     .contact-inner {
       background: var(--card);
       border: 1px solid var(--border);
@@ -531,6 +607,7 @@
       <a href="#about">About</a>
       <a href="#qualifications">Education</a>
       <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -687,9 +764,64 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="certificates">
     <div class="section-header">
       <span class="section-num">04</span>
+      <h2 class="section-title">Certificates</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-top">
+          <div class="cert-issuer">HarvardX</div>
+          <div class="cert-badge">Verified</div>
+        </div>
+        <div class="cert-title">CS50's Computer Science for Business</div>
+        <div class="cert-meta">Harvard University · March 2021</div>
+        <a class="cert-link" href="https://courses.edx.org/certificates/95282db6f6f444d89248d6df72521830" target="_blank">View Certificate ↗</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <div class="cert-issuer">BerkeleyX</div>
+          <div class="cert-badge">Verified</div>
+        </div>
+        <div class="cert-title">Bitcoin and Cryptocurrencies</div>
+        <div class="cert-meta">University of California, Berkeley · February 2019</div>
+        <a class="cert-link" href="https://courses.edx.org/certificates/3da4f37466eb41048e6ecba3f735d459" target="_blank">View Certificate ↗</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <div class="cert-issuer">BerkeleyX</div>
+          <div class="cert-badge">Verified</div>
+        </div>
+        <div class="cert-title">Blockchain Technology</div>
+        <div class="cert-meta">University of California, Berkeley · February 2019</div>
+        <a class="cert-link" href="https://courses.edx.org/certificates/54812e176ae448af964ead29bc426cc0" target="_blank">View Certificate ↗</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <div class="cert-issuer">NYIF</div>
+          <div class="cert-badge">Verified</div>
+        </div>
+        <div class="cert-title">Fundamentals of Technical Analysis</div>
+        <div class="cert-meta">New York Institute of Finance · September 2021</div>
+        <a class="cert-link" href="https://courses.edx.org/certificates/13730075e7ad457ca45a2dea518c6fa4" target="_blank">View Certificate ↗</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <div class="cert-issuer">NYIF</div>
+          <div class="cert-badge">Professional</div>
+        </div>
+        <div class="cert-title">Quantitative Technical Analysis</div>
+        <div class="cert-meta">New York Institute of Finance · September 2021</div>
+        <a class="cert-link" href="https://courses.edx.org/certificates/1643cfdd05ab48b79bb031d61a0d304a" target="_blank">View Certificate ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
       <h2 class="section-title">Contact</h2>
       <div class="section-line"></div>
     </div>
